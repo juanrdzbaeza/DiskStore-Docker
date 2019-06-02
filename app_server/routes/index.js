@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var ctrlDisks = require('../controllers/disks'); 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', ctrlDisks.diskList); 
 
 module.exports = router;
