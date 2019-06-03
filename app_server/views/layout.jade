@@ -1,31 +1,47 @@
 doctype html
-html
+html(lang="es")
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
-    //link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
-    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
+    link(rel="stylesheet", href="/stylesheets/footer.css")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+
   body
-   .navbar.navbar-default.navbar-fixed-top
+    <!-- header -->
+    header
+      .navbar.navbar-default.navbar-fixed-top
+        .container
+          .navbar-header
+            a.navbar-brand(href='/')= title
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          #navbar-main.navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li
+                a(href='/list') List
+    
+    <!-- contenido -->
+    nav
       .container
-        .navbar-header
-          a.navbar-brand(href='/') Juan
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-        #navbar-main.navbar-collapse.collapse
-          ul.nav.navbar-nav
-            li
-              a(href='/about/') About
-
-    .container
-      block content
-
-      footer
-        .row
-          .col-xs-12
-            small &copy; Master Tecnologias y Aplicaciones Informaticas 2017
+        block content
+    
+    <!-- footer -->
+    footer.footer-basic-centered
+      p.footer-company-motto The company Name.
+      p.footer-links
+        a(href="#") Home - 
+        a(href="#")  Blog - 
+        a(href="#")  Pricing - 
+        a(href="#")  About - 
+        a(href="#")  Faq
+      p.footer-company-name Company Name © 2019
+      .container
+        span.text-muted
+          a(href="#")@juan
+    
 
     script(src='/javascripts/jquery.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
