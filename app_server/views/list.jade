@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  #banner.page-header
+
+  .row
+    .col-xs-12.col-sm-8
+      .row.list-group
+        each disk in disks
+          .col-xs-12.list-group-item
+            a(href=disk.title)
+              .row
+                .col-xs-12.col-sm-4
+                  img(src=disk.image_url, alt="", style="width:100px; height:100px;")
+                .col-xs-12.col-sm-8
+                  h3= disk.title
+                  p= disk.description
+    .col-xs-12.col-sm-4
+      p.lead Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio est a animi perferendis quas harum tempora unde deserunt laborum numquam? Velit aspernatur doloribus nisi voluptate explicabo aliquid eum sequi ea.
