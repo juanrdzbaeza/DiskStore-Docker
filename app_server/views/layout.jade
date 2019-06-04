@@ -2,7 +2,9 @@ doctype html
 html(lang="es")
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv="refresh" content="20")
     title= title
+    link(href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css", rel="stylesheet")
     link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
     link(rel="stylesheet", href="/stylesheets/cover.css")
     link(rel="stylesheet", href="/stylesheets/footer.css")
@@ -28,6 +30,7 @@ html(lang="es")
     nav
       .container
         block content
+      .container.foot
     
     <!-- footer -->
     footer.footer-basic-centered.container-fluid

@@ -40,7 +40,7 @@ module.exports.disk = function (req, res) {
 
   request(requestOptions, function (err, response, responseBody) {
     renderOneDiskPage(req, res, responseBody);
-    console.log(responseBody);
+    //console.log(responseBody);
   });
 };
 
@@ -57,5 +57,16 @@ module.exports.diskList = function (req, res, next) {
   request(requestOptions, function (err, response, responseBody) {
     renderDisksPage(req, res, responseBody);
     //console.log(responseBody);
+  });
+};
+
+
+/* GET 'Add disk' page */
+module.exports.addDisk = function(req, res) {
+  res.render('newDisk', {
+      title: 'Disk store',
+      pageHeader: {
+          title: 'Disk store'
+      }
   });
 };

@@ -5,6 +5,7 @@ var ctrlDisks = require('../controllers/disks');
 /* GET home page. */
 router.get('/', ctrlDisks.homelist);
 router.get('/disk/:diskId', ctrlDisks.disk);
-router.get('/list', ctrlDisks.diskList); 
+router.get('/list', ctrlDisks.diskList);
+router.get('/new', ctrlDisks.addDisk);
 
 module.exports = router;
