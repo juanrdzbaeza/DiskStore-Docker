@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
 var songsSchema = new mongoose.Schema({
-  sideA: {
+  A: {
     type: [String]
   },
-  sideB: {
+  B: {
     type: [String]
   }
 })
@@ -29,7 +29,7 @@ var diskSchema = mongoose.Schema({
     type: String
   },
   songs : {
-    type: [songsSchema],
+    type: songsSchema,
   },
   image_url: {
     type: String

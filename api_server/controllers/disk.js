@@ -95,7 +95,7 @@ module.exports.diskCreate = function (req, res) {
   if (req.body.song6){
     sideA.push(req.body.song6);
   }
-  /* Side B Songs  creo que la cancion si existe pero es cadena vacia*/
+  /* Side B Songs */
   if (req.body.song7){
     sideB.push(req.body.song7);
   }
@@ -116,8 +116,8 @@ module.exports.diskCreate = function (req, res) {
   }
   
   var songs = {
-    'sideA': sideA,
-    'sideB': sideB
+    'A': sideA,
+    'B': sideB
   };
   
   Disk

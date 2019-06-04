@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  #banner.page-header
+
+  .row
+    .col-xs-12.col-sm-1
+
+
+    .col-xs-12.col-sm-10
+      .row.diskBox
+        .col-xs-12.col-sm-4
+          img(src=disk.image_url, alt="", style="width:250px; height:250px;")
+        .col-xs-12.col-sm-2
+        .col-xs-12.col-sm-6
+          h3= disk.title
+          p= disk.description
+          .container
+            h3 Songs List
+            ul.list-group
+              each side, i in disk.songs
+                h4(class="item-#{i}") Side #{i}
+                each s in side
+                  li(class="item-#{i}") #{s}
+            a.btn.btn-lg.btn-default.acover(href="#") lorem ipsum
+                  
+
+    .col-xs-12.col-sm-1
+
+
+
+  

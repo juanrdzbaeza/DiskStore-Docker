@@ -8,7 +8,7 @@ block content
       .row.list-group
         each disk in disks
           .col-xs-12.list-group-item
-            a(href=disk.title)
+            a(href="/disk/#{disk._id}")
               .row
                 .col-xs-12.col-sm-4
                   img(src=disk.image_url, alt="", style="width:100px; height:100px;")

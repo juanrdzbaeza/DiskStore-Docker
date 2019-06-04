@@ -7,7 +7,7 @@ var ctrlDisk = require('../controllers/disk');
  */
 //router.get('/', ctrlDisk.diskFindOne);
 router.get('/', ctrlDisk.diskFindAll);
-router.get('/id/:id', ctrlDisk.diskFindById);
+router.get('/disk/:id', ctrlDisk.diskFindById);
 
 /**
  * metodos post
