@@ -7,22 +7,27 @@ block content
     .col-xs-12.col-sm-12
       .row
         .col-xs-12.col-md-12
-          form.form-horizontal(action="/", method="get  tiene que ser post     ", role="form")
+          form.form-horizontal(action="/disk", method="post", role="form")
             .form-group
               label.col-xs-10.col-sm-2.control-label(for="name") Title
               br
               .col-xs-12.col-sm-10
-                input#name.form-control(name="title" placeholder="title of the disk")
+                input#name.form-control(name="title" placeholder="title of the disk" value="Legend") 
               
               label.col-xs-10.col-sm-2.control-label(for="name") Genre
               br
               .col-xs-12.col-sm-10
-                input#name.form-control(name="genre" placeholder="genre of the disk")
+                input#name.form-control(name="genre" placeholder="genre of the disk" value="Reggae")
               
               label.col-xs-10.col-sm-2.control-label(for="name") Artist
               br
               .col-xs-12.col-sm-10
-                input#name.form-control(name="artist" placeholder="artist of the disk")
+                input#name.form-control(name="artist" placeholder="artist of the disk" value="Bob Marley & the Waylers")
+              
+              label.col-xs-10.col-sm-2.control-label(for="name") Publisher
+              br
+              .col-xs-12.col-sm-10
+                input#name.form-control(name="publisher" placeholder="Publisher" value="Atlantic")
 
 
 
@@ -31,30 +36,30 @@ block content
               br
               .col-xs-12.col-sm-5
                 h3 Side A
-                input#name.form-control(name="song1" placeholder="Song 1")
-                input#name.form-control(name="song2" placeholder="Song 2")
-                input#name.form-control(name="song3" placeholder="Song 3")
-                input#name.form-control(name="song4" placeholder="Song 4")
-                input#name.form-control(name="song5" placeholder="Song 5")
-                input#name.form-control(name="song6" placeholder="Song 6")
+                input#name.form-control(name="song1" placeholder="Song 1" value="Is This Love")
+                input#name.form-control(name="song2" placeholder="Song 2" value="No Woman No Cry")
+                input#name.form-control(name="song3" placeholder="Song 3" value="Could You Be Loved")
+                input#name.form-control(name="song4" placeholder="Song 4" value="Three Little Birds")
+                input#name.form-control(name="song5" placeholder="Song 5" value="Buffalo Soldier")
+                input#name.form-control(name="song6" placeholder="Song 6" value="Get Up Stand Up")
               
               .col-xs-12.col-sm-5
                 h3 Side B
-                input#name.form-control(name="song7" placeholder="Song 7")
-                input#name.form-control(name="song8" placeholder="Song 8")
-                input#name.form-control(name="song9" placeholder="Song 9")
-                input#name.form-control(name="song10" placeholder="Song 10")
-                input#name.form-control(name="song11" placeholder="Song 11")
-                input#name.form-control(name="song12" placeholder="Song 12")
+                input#name.form-control(name="song7" placeholder="Song 7" value="One Love/People Get Ready")
+                input#name.form-control(name="song8" placeholder="Song 8" value="I Shot the Sheriff")
+                input#name.form-control(name="song9" placeholder="Song 9" value="Waiting in Vain")
+                input#name.form-control(name="song10" placeholder="Song 10" value="Redemption Song")
+                input#name.form-control(name="song11" placeholder="Song 11" value="Satisfy My Soul")
+                input#name.form-control(name="song12" placeholder="Song 12" value="Exodus")
 
             .form-group
               label.col-sm-2.control-label(for="Description") Description
               br
               .col-sm-10
-                textarea#review.form-control(name="description", rows="5")
+                textarea#review.form-control(name="description", rows="5" ) Reedición en formato vinilo del mítico recopilatorio con todos los grandes éxitos de Bob Marley y su grupo.
               
               label.col-sm-2.control-label(for="image_url") URL image
               br
               .col-sm-10
-                textarea#review.form-control(name="image_url", rows="1" placeholder="URL for de image")
+                textarea#review.form-control(name="image_url", rows="1" placeholder="URL for de image" ) https://images-na.ssl-images-amazon.com/images/I/513EjU1PfrL.jpg
             button.btn.btn-default.pull-right Add new disk

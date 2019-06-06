@@ -74,7 +74,8 @@ module.exports.diskFindById = function (req, res) {
 module.exports.diskCreate = function (req, res) {
   var sideA = [];
   var sideB = [];
-  console.log(req);
+  
+  //console.log(req.body);
 
   /* Side A Songs */
   if (req.body.song1){
@@ -133,7 +134,7 @@ module.exports.diskCreate = function (req, res) {
       if (err) {
         return res
           .status(400)
-          .send(err);
+          .send({"message": "Error" + err + ", algo salio mal"});
       }
       return res
         .status(201)
