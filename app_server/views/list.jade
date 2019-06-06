@@ -8,7 +8,7 @@ block content
       .row.list-group
         each disk in disks
           .col-xs-12.list-group-item
-            a(href=disk.title)
+            a(href="/disk/#{disk._id}")
               .row
                 .col-xs-12.col-sm-4
                   img(src=disk.image_url, alt="", style="width:100px; height:100px;")
@@ -17,3 +17,5 @@ block content
                   p= disk.description
     .col-xs-12.col-sm-4
       p.lead Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio est a animi perferendis quas harum tempora unde deserunt laborum numquam? Velit aspernatur doloribus nisi voluptate explicabo aliquid eum sequi ea.
+      .container 
+            a.btn.btn-default.pull-right(href="/new") Add disk

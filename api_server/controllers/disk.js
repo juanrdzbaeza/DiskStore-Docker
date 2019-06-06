@@ -74,7 +74,8 @@ module.exports.diskFindById = function (req, res) {
 module.exports.diskCreate = function (req, res) {
   var sideA = [];
   var sideB = [];
-  console.log(req);
+  
+  //console.log(req.body);
 
   /* Side A Songs */
   if (req.body.song1){
@@ -95,7 +96,7 @@ module.exports.diskCreate = function (req, res) {
   if (req.body.song6){
     sideA.push(req.body.song6);
   }
-  /* Side B Songs  creo que la cancion si existe pero es cadena vacia*/
+  /* Side B Songs */
   if (req.body.song7){
     sideB.push(req.body.song7);
   }
@@ -116,8 +117,8 @@ module.exports.diskCreate = function (req, res) {
   }
   
   var songs = {
-    'sideA': sideA,
-    'sideB': sideB
+    'A': sideA,
+    'B': sideB
   };
   
   Disk
@@ -133,7 +134,7 @@ module.exports.diskCreate = function (req, res) {
       if (err) {
         return res
           .status(400)
-          .send(err);
+          .send({"message": "Error" + err + ", algo salio mal"});
       }
       return res
         .status(201)

@@ -4,6 +4,7 @@ html(lang="es")
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
     link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
+    link(rel="stylesheet", href="/stylesheets/cover.css")
     link(rel="stylesheet", href="/stylesheets/footer.css")
     link(rel="stylesheet", href="/stylesheets/style.css")
 
@@ -27,21 +28,15 @@ html(lang="es")
     nav
       .container
         block content
+      .container.foot
     
     <!-- footer -->
-    footer.footer-basic-centered
+    footer.footer-basic-centered.container-fluid
       p.footer-company-motto The company Name.
-      p.footer-links
-        a(href="#") Home - 
-        a(href="#")  Blog - 
-        a(href="#")  Pricing - 
-        a(href="#")  About - 
-        a(href="#")  Faq
-      p.footer-company-name Company Name © 2019
-      .container
+      p.footer-company-name Company Name © 2019 -
         span.text-muted
-          a(href="#")@juan
-    
+          a(href="https://github.com/juanrdzbaeza").text-muted - @juanrdzbaeza
+      
 
     script(src='/javascripts/jquery.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
