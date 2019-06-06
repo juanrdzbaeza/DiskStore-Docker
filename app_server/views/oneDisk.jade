@@ -23,7 +23,10 @@ block content
                 each s in side
                   li(class="item-#{i}") #{s}
           .container 
-            a.btn.btn-lg.btn-default.trash-button(href="#") Trash
+            form(action="/disk/#{disk._id}" method="post")
+              
+              button.btn.btn-default.pull-right Trash
+            
                   
 
     .col-xs-12.col-sm-1

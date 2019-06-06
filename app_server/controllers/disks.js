@@ -110,3 +110,24 @@ module.exports.doAddDisk = function(req, res){
   });
 
 };
+
+module.exports.doDeleteDisk = function(req,res){
+  var requestOption, path;
+
+  var path = '/disk/' + req.params.diskId;
+  //console.log(path);
+  
+  requestOption = {
+    url : apiOptions.server + path,
+    method : 'DELETE',
+    json : {},
+  };
+
+  request(requestOption, function(err,response,body){
+    if (response.statusCode === 204) {
+      res.redirect('/list');
+    }
+  });
+
+
+};
