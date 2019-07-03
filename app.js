@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var cors = require('cors');
+//var cors = require('cors');
 
 require('./api_server/models/db');
 
@@ -12,7 +12,7 @@ var index = require('./app_server/routes/index');
 var apiRouter = require('./api_server/routes/index');
 
 var app = express();
-
+/*
 app.use(cors())
 
 app.get('/products/:id', function (req, res, next) {
@@ -22,7 +22,7 @@ app.get('/products/:id', function (req, res, next) {
 app.listen(80, function () {
   console.log('CORS-enabled web server listening on port 80')
 })
-
+*/
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
 app.set('view engine', 'jade');

@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'); 
 
-var dbURI = 'mongodb://localhost/diskstore';
+var dbURI = 'mongodb://192.168.66.63/diskstore';
 
 mongoose.connect(dbURI); 
 
